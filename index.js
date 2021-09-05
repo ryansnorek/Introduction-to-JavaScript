@@ -45,7 +45,7 @@ if (secondVariable === 'twenty') {
 };
 
 console.log(firstVariable);
-
+ 
 /*
 Task 1c - Convert Strings to Numbers
 
@@ -57,8 +57,10 @@ Do the following:
    HINT: look up the Number method
 */
 
+let year = '1999';
+year = Number(year);
 
-
+console.log(year);
 
 /*
 Task 1d - Multiply

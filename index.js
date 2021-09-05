@@ -19,6 +19,13 @@ Do the following:
 
    HINT: no function required
 */
+let age = 69;
+const votingAge = 18;
+
+if (age > 18) {
+  console.log(true)
+}
+
 
 
 

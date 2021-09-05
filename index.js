@@ -24,7 +24,7 @@ const votingAge = 18;
 
 if (age > 18) {
   console.log(true)
-};
+}
 
 /*
 Task 1b - Values
@@ -42,7 +42,7 @@ const secondVariable = 'twenty';
 
 if (secondVariable === 'twenty') {
   firstVariable = firstVariable + 416;
-};
+}
 
 console.log(firstVariable);
  
@@ -71,10 +71,11 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(a, b){
+  return a * b;
 }
 
+multiply(6, 9)
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/

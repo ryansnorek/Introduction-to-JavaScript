@@ -24,10 +24,7 @@ const votingAge = 18;
 
 if (age > 18) {
   console.log(true)
-}
-
-
-
+};
 
 /*
 Task 1b - Values
@@ -40,9 +37,14 @@ Do the following:
    HINT: no function required
 */
 
+let firstVariable = 4;
+const secondVariable = 'twenty';
 
+if (secondVariable === 'twenty') {
+  firstVariable = firstVariable + 416;
+};
 
-
+console.log(firstVariable);
 
 /*
 Task 1c - Convert Strings to Numbers

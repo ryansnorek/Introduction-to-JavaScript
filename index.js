@@ -22,9 +22,9 @@ Do the following:
 let personsAge = 69;
 const votingAge = 18;
 
-if (personsAge > 18) {
-  console.log(true)
-}
+if (personsAge >= 18) console.log(true);
+else console.log(false)
+
 
 /*
 Task 1b - Values
@@ -58,7 +58,7 @@ Do the following:
 
 let year = '1999';
 year = Number(year);
-console.log(year);
+// console.log(year);
 
 /*
 Task 1d - Multiply
@@ -72,7 +72,7 @@ Do the following:
 function multiply(a, b){
   return a * b;
 }
-multiply(6, 9);
+// multiply(6, 9);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -88,7 +88,7 @@ function dogYears(age){
   return age * 7;
 }
 
-dogYears(3);
+// dogYears(3);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -134,17 +134,14 @@ function hungryDog(weight, age){
     age = age * 12;
 
     if (age >= 2) {
-      if (weight <= 4) multiplier = 0.1;
-      else if (weight <= 7) multiplier = 0.05;
-      else multiplier = 0.04;
+      if (age > 6.9) multiplier = 0.04;
+      else if (age > 4) multiplier = 0.05;
+      else multiplier = 0.1;
     }
   }
-
   poundsOfFood = weight * multiplier;
   return poundsOfFood;
 }
-
-hungryDog(15, 1);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -167,49 +164,34 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-const computerChoice = Math.random()
+let computer = Math.random()
+if (computer <= 0.34) computer = 'rock';
+else if (computer <= 0.67) computer = 'paper'; 
+else computer = 'scissors';
 
 function game(user, computer){
-
-  const rock = 1;
-  const paper = 2;
-  const scissors = 3;
   let win = false;
   let tie = false; 
-  const winner = 'you win!'
-  const loser = 'you lose!'
-  let results = "it's a tie";
-
-  // Computer choice
-  if (computer < 0.34) computer = rock;
-  else if (computer < 0.67) computer = paper; 
-  else computer = scissors;
-
-  // User choice
-  if (user == 'rock') user = rock;
-  else if (user == 'paper') user = paper;
-  else user = scissors;
 
   // Calculate game results
   if (user === computer) tie = true;
-  else if (user === scissors) {
-    if (computer === paper) win = true;
+  else if (user === 'scissors') {
+    if (computer === 'paper') win = true;
   } 
-  else if (user === paper) {
-    if (computer === rock) win = true;
+  else if (user === 'paper') {
+    if (computer === 'rock') win = true;
   }
   else {
-    if (computer === scissors) win = true;
+    if (computer === 'scissors') win = true;
   }
-  // Return results
-  if (win) results = winner;
-  else if (!win && !tie) results = loser;
-  else return results;
+  // console.log('user: ',user, ' com: ',computer)
 
-  return results;
+  if (win) return 'you win!';
+  else if (!win && !tie) return 'you lose!' ;
+  else return "it's a tie";
 }
 
-game('rock', computerChoice);
+console.log(game('rock', computer));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -223,10 +205,10 @@ Using the miles function below do the following:
 */
 
 function miles(km){
-  return km / 1.609344;
+  return km * 0.621371;
 }
 
-miles(69);
+// miles(69);
 
 //Task 5b - Feet to CM
 /*
@@ -237,10 +219,10 @@ Using the feet function below do the following:
 */
 
 function feet(cm){
-  return cm / 12;
+  return cm / 30.48;
 }
 
-feet(420);
+// feet(420);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -255,14 +237,14 @@ Using the annoyingSong function below do the following:
 function annoyingSong(num){
   let leftOver = num - 1;
 
-  for (let i = 0; i <= num; i++) {
-    console.log(`${num} bottles of soda on the wall, ${num} bottles of soda, take one down pass it around ${leftOver} bottles of soda on the wall`);
+  for (let i = num; i > 0; i--) {
+    return(`${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i - 1} bottles of soda on the wall`);
     num--;
     leftOver--;
   } 
 }
 
-annoyingSong(100);
+annoyingSong(5);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -296,7 +278,7 @@ function grade(score) {
   return `you got a${n} ${letterGrade}`;
 }
 
-grade(100);
+// grade(100);
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
@@ -321,7 +303,7 @@ function vowelCounter(string) {
   return count;
 }
 
-vowelCounter('vowel is just love + double you');
+// vowelCounter('vowel is just love + double you');
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
 function foo(){

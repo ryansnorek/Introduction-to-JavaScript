@@ -43,7 +43,6 @@ const secondVariable = 'twenty';
 if (secondVariable === 'twenty') {
   firstVariable = firstVariable + 416;
 }
-
 console.log(firstVariable);
  
 /*
@@ -59,7 +58,6 @@ Do the following:
 
 let year = '1999';
 year = Number(year);
-
 console.log(year);
 
 /*
@@ -74,9 +72,7 @@ Do the following:
 function multiply(a, b){
   return a * b;
 }
-
-multiply(6, 9)
-
+multiply(6, 9);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -92,7 +88,7 @@ function dogYears(age){
   return age * 7;
 }
 
-dogYears(3)
+dogYears(3);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -148,8 +144,7 @@ function hungryDog(weight, age){
   return poundsOfFood;
 }
 
-console.log(hungryDog(15, 1))
-
+hungryDog(15, 1);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -214,10 +209,7 @@ function game(user, computer){
   return results;
 }
 
-
-console.log(game('rock', computerChoice))
-
-
+game('rock', computerChoice);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -234,6 +226,8 @@ function miles(km){
   return km / 1.609344;
 }
 
+miles(69);
+
 //Task 5b - Feet to CM
 /*
 Using the feet function below do the following:
@@ -245,6 +239,8 @@ Using the feet function below do the following:
 function feet(cm){
   return cm / 12;
 }
+
+feet(420);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -265,6 +261,8 @@ function annoyingSong(num){
     leftOver--;
   } 
 }
+
+annoyingSong(100);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -298,6 +296,8 @@ function grade(score) {
   return `you got a${n} ${letterGrade}`;
 }
 
+grade(100);
+
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
 //Vowel Counter - How many vowels are there?
@@ -320,6 +320,8 @@ function vowelCounter(string) {
   }
   return count;
 }
+
+vowelCounter('vowel is just love + double you');
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
 function foo(){

@@ -258,7 +258,7 @@ Using the annoyingSong function below do the following:
 
 function annoyingSong(num){
   let leftOver = num - 1;
-  
+
   for (let i = 0; i <= num; i++) {
     console.log(`${num} bottles of soda on the wall, ${num} bottles of soda, take one down pass it around ${leftOver} bottles of soda on the wall`);
     num--;
@@ -281,11 +281,22 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(score) {
+  let letterGrade = 'F';
+  let an = false;
+  let n = ''
+
+  if (score < 60 || score > 89) {
+    an = true;
+    n = 'n'
+    if (score > 89) letterGrade = 'A';
+  }
+  else if (score > 79) letterGrade = 'B';
+  else if (score > 69) letterGrade = 'C';
+  else if (score > 59) letterGrade = 'D';
+
+  return `you got a${n} ${letterGrade}`;
 }
-
-
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
@@ -299,12 +310,16 @@ HINT - you may need to study tomorrow's content on arrays
 HINT - try looking up the .includes() method
 */
 
-
-function vowelCounter(/*add your code here*/) {
-  /*add your code here*/
+function vowelCounter(string) {
+  const vowels = ['a', 'e', 'i', 'o', 'u'];
+  const str = string.split('');
+  let count = 0;
+  
+  for (let i = 0; i < str.length; i++) {
+    if (vowels.includes(str[i])) count++;
+  }
+  return count;
 }
-
-
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
 function foo(){
